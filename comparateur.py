@@ -25,9 +25,9 @@ def makeRow(query,prixCher):
 def makeTable(objects,prixCher):
     table = PrettyTable()
     table.field_names = ["Product", "Price", f"Moins cher que {prixCher}"]
-    for query in objects:        
-        row=makeRow(query,prixCher)
-        table.add_row(row)
+    for query in objects:        #pour chaque objet dans la liste objects
+        row=makeRow(query,prixCher) #on cree une ligne avec makeRow
+        table.add_row(row)        #on ajoute la ligne au tableau avec add_row
     print(table)
 
 
